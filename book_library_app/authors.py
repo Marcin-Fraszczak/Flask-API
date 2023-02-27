@@ -2,6 +2,7 @@ from flask import jsonify
 
 from book_library_app import app
 
+
 @app.route('/api/v1/authors', methods=['GET'])
 def get_authors():
     return jsonify({
@@ -40,5 +41,3 @@ def delete_author(author_id: int):
         'success': True,
         'data': f'Author with id {author_id} has been deleted'
     }), 200
-
-
